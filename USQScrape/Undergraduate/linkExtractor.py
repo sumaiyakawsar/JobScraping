@@ -2,7 +2,7 @@
     * author: Sumaiya Kawsar
     * company: Fresh Futures/Seeka Technology
     * position: IT Intern
-    * date: 27-10-20
+    * date: 03-11-20
     * description:This script extracts all the courses links and save it in txt file.
 """
 
@@ -41,19 +41,6 @@ def all_faculty():
         else:
             list_of_groups.append(link)
             faculty.append(name)
-
-def all_courses():
-    for each_url in list_of_groups:
-        browser.get(each_url)
-        pure_url = each_url.strip()
-        each_url = browser.page_source
-        courses = browser.find_elements_by_css_selector(".c-program-table__program-link")
-        if courses:
-            for ea in courses:
-                course_link = ea.get_property('href')
-                list_of_links.append(course_link)
-    print(len(list_of_links))
-
 
 # SAVE TO FILE
 def save_courses(link_list):
