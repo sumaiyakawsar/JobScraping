@@ -53,7 +53,7 @@ def save_courses(link_list, filename_):
 
 
 all_courses()
-save_courses(list_of_courses, '/monash_undergraduate_links.txt')
+save_courses(list_of_courses, '/Monash_UGinks.txt')
 
 browser.quit()
 
