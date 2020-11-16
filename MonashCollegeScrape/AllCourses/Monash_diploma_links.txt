@@ -1,0 +1,8 @@
+https://www.monashcollege.edu.au/courses/diplomas/diploma-of-applied-data-science
+https://www.monashcollege.edu.au/courses/diplomas/art-and-design
+https://www.monashcollege.edu.au/courses/diplomas/arts
+https://www.monashcollege.edu.au/courses/diplomas/business
+https://www.monashcollege.edu.au/courses/diplomas/education-studies
+https://www.monashcollege.edu.au/courses/diplomas/engineering
+https://www.monashcollege.edu.au/courses/diplomas/information-technology
+https://www.monashcollege.edu.au/courses/diplomas/science
