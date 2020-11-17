@@ -3,7 +3,7 @@
     * author: Sumaiya Kawsar
     * company: Fresh Futures/Seeka Technologies
     * position: IT Intern
-    * date: 16-12-20
+    * date: 16-11-20
     * description:This program extracts the corresponding course details and tabulate it.
 """
 import csv
