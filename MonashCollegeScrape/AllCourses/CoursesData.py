@@ -50,7 +50,7 @@ def has_numbers(input_string):
 
 
 course_data = {'Level_Code': '',
-               'University': 'Monash University',
+               'University': 'Monash College',
                'City': '',
                'Course': '',
                'Faculty': '',
