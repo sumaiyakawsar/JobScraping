@@ -3,7 +3,7 @@
     * author: Sumaiya Kawsar
     * company: Fresh Futures/Seeka Technologies
     * position: IT Intern
-    * date: 17-11-20
+    * date: 23-11-20
     * description:This program extracts the corresponding course details and tabulate it.
 """
 import copy
@@ -205,7 +205,6 @@ def iels(ielts):
             course_data['Prerequisite_2_grade_2'] = "N/A"
 
 for each_url in course_links_file:
-    index = index + 1
     actual_cities = []
     browser.get(each_url)
     pure_url = each_url.strip()
@@ -254,7 +253,7 @@ for each_url in course_links_file:
     else:
         course_data['Description'] = "N/A"
 
-    # print(index, course_data['Course'],course_data['Level_Code'],"//",course_data['Description'],course_data['Website'])
+    # print( course_data['Course'],course_data['Level_Code'],"//",course_data['Description'],course_data['Website'])
 
     # Duration
     dura = soup.select("dt:contains('Length') + dd")
@@ -304,7 +303,6 @@ for each_url in course_links_file:
                 actual_cities.append(possible_cities[i])
     else:
         pass
-        # print("Please check")
 
     if "D" in course_data['Availability'] or "A" in course_data['Availability']:
         money = soup.select("#fees > table > tbody > tr.totals > td[colspan]")
@@ -404,7 +402,7 @@ for each_url in course_links_file:
     else:
         course_data['Career_Outcomes/path'] = "N/A"
 
-    print(index, course_data['Website'],  course_data['Availability'], "///", course_data['Career_Outcomes/path'])
+    # print(course_data['Website'],  course_data['Availability'],  course_data['Career_Outcomes/path'])
  
     if actual_cities is not None:
         course_data['Offline'] = "Yes"
