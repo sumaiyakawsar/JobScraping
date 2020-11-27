@@ -62,16 +62,16 @@ def all_course_areas(list_):
                         list_of_single_unit.append(link)
                     else:
                         del link
-																elif "cpd" in link:
-																				if link not in list_of_single_unit:
-																								list_of_cpd.append(link)
-																				else:
-																								del link
+		elif "cpd" in link:
+		    if link not in list_of_single_unit:
+			list_of_cpd.append(link)
+		    else:
+			del link
                 elif "short-course" in link or "307" in link or "306" in link:
-                    if link not in list_of_short_course:
-																								list_of_short_course.append(link)
-																				else:
-																								del link
+                    if link not in list_of_short_course:						
+			list_of_short_course.append(link)
+		    else:								
+			del link
                 else:
                     list_of_links.append(link)
             else:
