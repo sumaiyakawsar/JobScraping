@@ -80,9 +80,6 @@ possible_cities = {'sydney': 'Sydney',
                    'gold coast': 'Gold Coast'
                    }
 
-number = r"(\d+,\d{3})*\.*\d*"
-currency_pattern = rf"\${number}"
-
 course_data_all = []
 
 level_key = TemplateData.level_key  # dictionary of course levels
@@ -92,11 +89,6 @@ def tag_text(string_):
     return string_.get_text().__str__().strip()
 
 
-def clean_tags(soup_):
-    for tag in soup_.find_all("h3"):
-        tag.decompose()  # removes unecessary hidden text if called
-
-
 def has_numbers(input_string):
     return any(char.isdigit() for char in input_string)
 
@@ -104,19 +96,6 @@ def has_numbers(input_string):
 def description(course_description):
     for each_desc in course_description:
         course_data['Description'] = each_desc.text.replace("\n", "").strip()
-
-
-def online(word_):
-    for study in word_:
-        study_mod = study.text.lower()
-        if 'online' in study_mod:
-            course_data['Online'] = "Yes"
-        else:
-            course_data['Online'] = "No"
-        if 'face to face' in study_mod:
-            course_data['Offline'] = "Yes"
-        else:
-            course_data['Offline'] = "No"
 
 
 for each_url in course_links_file:
