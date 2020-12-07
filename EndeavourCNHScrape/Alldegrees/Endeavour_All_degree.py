@@ -407,6 +407,7 @@ for each_url in course_links_file:
             "body > main > div:nth-child(1) > div.row-1-2 > div:nth-child(1) > section > div:nth-child(5) > div.outline-body > p:nth-child(1)")
         local_money_r(fee)
         int_money_r(fee)
+        course_data['Availability'] = "A"
     elif "diploma of health science" in course_nam:
         course_data['Local_Fees'] = 17636
         course_data['Availability'] = "A"
@@ -487,7 +488,6 @@ desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
                       'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
                       'Online', 'Offline', 'Distance', 'Face_to_Face', 'Blended', 'Remarks',
-                      'Course Delivery Mode', 'FREE TAFE',
                       'Subject_or_Unit_1', 'Subject_Description_1',
                       'Subject_or_Unit_2', 'Subject_Description_2',
                       'Subject_or_Unit_3', 'Subject_Description_3',
