@@ -42,7 +42,6 @@ course_data_all = []
 
 level_key = TemplateData.level_key  # dictionary of course levels
 
-
 def tag_text(string_):
     return string_.get_text().__str__().strip()
 
