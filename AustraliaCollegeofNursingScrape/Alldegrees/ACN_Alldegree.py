@@ -36,47 +36,6 @@ course_links_file = open(course_links_file_path, 'r')
 csv_file_path = Path(os.getcwd().replace('\\', '/'))
 csv_file = csv_file_path.parent.__str__() + '/ACN_allcourses.csv'
 
-course_data = {'Level_Code': '', 'University': 'Australian College of Nursing', 'City': '',
-               'Course': '', 'Faculty': '',
-               'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
-               'Duration': '', 'Duration_Time': '', 'Full_Time': '', 'Part_Time': '',
-               'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_1_grade_1': '',
-               'Prerequisite_2_grade_2': '',
-               'Website': '', 'Course_Lang': 'English', 'Availability': '', 'Description': '',
-               'Career_Outcomes/path': '', 'Country': 'Australia',
-               'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
-               'Subject_or_Unit_1': '', 'Subject_Objective_1': '', 'Subject_Description_1': '',
-               'Subject_or_Unit_2': '', 'Subject_Objective_2': '', 'Subject_Description_2': '',
-               'Subject_or_Unit_3': '', 'Subject_Objective_3': '', 'Subject_Description_3': '',
-               'Subject_or_Unit_4': '', 'Subject_Objective_4': '', 'Subject_Description_4': '',
-               'Subject_or_Unit_5': '', 'Subject_Objective_5': '', 'Subject_Description_5': '',
-               'Subject_or_Unit_6': '', 'Subject_Objective_6': '', 'Subject_Description_6': '',
-               'Subject_or_Unit_7': '', 'Subject_Objective_7': '', 'Subject_Description_7': '',
-               'Subject_or_Unit_8': '', 'Subject_Objective_8': '', 'Subject_Description_8': '',
-               'Subject_or_Unit_9': '', 'Subject_Objective_9': '', 'Subject_Description_9': '',
-               'Subject_or_Unit_10': '', 'Subject_Objective_10': '', 'Subject_Description_10': '',
-               'Subject_or_Unit_11': '', 'Subject_Objective_11': '', 'Subject_Description_11': '',
-               'Subject_or_Unit_12': '', 'Subject_Objective_12': '', 'Subject_Description_12': '',
-               'Subject_or_Unit_13': '', 'Subject_Objective_13': '', 'Subject_Description_13': '',
-               'Subject_or_Unit_14': '', 'Subject_Objective_14': '', 'Subject_Description_14': '',
-               'Subject_or_Unit_15': '', 'Subject_Objective_15': '', 'Subject_Description_15': '',
-               'Subject_or_Unit_16': '', 'Subject_Objective_16': '', 'Subject_Description_16': '',
-               'Subject_or_Unit_17': '', 'Subject_Objective_17': '', 'Subject_Description_17': '',
-               'Subject_or_Unit_18': '', 'Subject_Objective_18': '', 'Subject_Description_18': '',
-               'Subject_or_Unit_19': '', 'Subject_Objective_19': '', 'Subject_Description_19': '',
-               'Subject_or_Unit_20': '', 'Subject_Objective_20': '', 'Subject_Description_20': '',
-               'Subject_or_Unit_21': '', 'Subject_Objective_21': '', 'Subject_Description_21': '',
-               'Subject_or_Unit_22': '', 'Subject_Objective_22': '', 'Subject_Description_22': '',
-               'Subject_or_Unit_23': '', 'Subject_Objective_23': '', 'Subject_Description_23': '',
-               'Subject_or_Unit_24': '', 'Subject_Objective_24': '', 'Subject_Description_24': '',
-               'Subject_or_Unit_25': '', 'Subject_Objective_25': '', 'Subject_Description_25': '',
-               'Subject_or_Unit_26': '', 'Subject_Objective_26': '', 'Subject_Description_26': '',
-               'Subject_or_Unit_27': '', 'Subject_Objective_27': '', 'Subject_Description_27': '',
-               'Subject_or_Unit_28': '', 'Subject_Objective_28': '', 'Subject_Description_28': '',
-               'Subject_or_Unit_29': '', 'Subject_Objective_29': '', 'Subject_Description_29': '',
-               'Subject_or_Unit_30': '', 'Subject_Objective_30': '', 'Subject_Description_30': ''
-               }
-
 number = r"(\d+,\d{3})*\.*\d*"
 currency_pattern = rf"\${number}"
 
