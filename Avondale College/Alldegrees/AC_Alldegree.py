@@ -37,16 +37,6 @@ course_links_file = open(course_links_file_path, 'r')
 csv_file_path = Path(os.getcwd().replace('\\', '/'))
 csv_file = csv_file_path.parent.__str__() + '/AC_AllCourses.csv'
 
-course_data = {'Level_Code': '', 'University': 'Avondale College', 'City': '', 'Course': '', 'Faculty': '',
-               'Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
-               'Duration': '', 'Duration_Time': '', 'Full_Time': '', 'Part_Time': '',
-               'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': 'Equivalent AQF Level',
-               'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
-               'Website': '', 'Course_Lang': 'English', 'Availability': '',
-               'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
-               'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': ''
-               }
-
 possible_cities = {'lake macquarie': 'Lake Macquarie',
                    'sydney': 'Sydney'
                    }
