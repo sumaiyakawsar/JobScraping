@@ -39,8 +39,6 @@ course_links_file = open(course_links_file_path, 'r')
 csv_file_path = Path(os.getcwd().replace('\\', '/'))
 csv_file = csv_file_path.parent.__str__() + '/Endeavour_allCourses.csv'
 
-
-
 possible_cities = {'brisbane': 'Brisbane',
                    'sydney': 'Sydney',
                    'adelaide': 'Adelaide',
@@ -157,7 +155,6 @@ def durationo(p_word):
         course_data['Duration_Time'] = ''
 
 
-index = 0
 for each_url in course_links_file:
     course_data = {'Level_Code': '', 'University': 'Endeavour College of Natural Health', 'City': '', 'Course': '',
                    'Faculty': 'College of Natural Health',
@@ -167,74 +164,48 @@ for each_url in course_links_file:
                    'Prerequisite_2_grade_2': '', 'Website': '', 'Course_Lang': 'English',
                    'Availability': '', 'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
-                   'Subject_or_Unit_1': '', 'Subject_Description_1': '',
-                   'Subject_or_Unit_2': '', 'Subject_Description_2': '',
-                   'Subject_or_Unit_3': '', 'Subject_Description_3': '',
-                   'Subject_or_Unit_4': '', 'Subject_Description_4': '',
-                   'Subject_or_Unit_5': '', 'Subject_Description_5': '',
-                   'Subject_or_Unit_6': '', 'Subject_Description_6': '',
-                   'Subject_or_Unit_7': '', 'Subject_Description_7': '',
-                   'Subject_or_Unit_8': '', 'Subject_Description_8': '',
-                   'Subject_or_Unit_9': '', 'Subject_Description_9': '',
-                   'Subject_or_Unit_10': '', 'Subject_Description_10': '',
-                   'Subject_or_Unit_11': '', 'Subject_Description_11': '',
-                   'Subject_or_Unit_12': '', 'Subject_Description_12': '',
-                   'Subject_or_Unit_13': '', 'Subject_Description_13': '',
-                   'Subject_or_Unit_14': '', 'Subject_Description_14': '',
-                   'Subject_or_Unit_15': '', 'Subject_Description_15': '',
-                   'Subject_or_Unit_16': '', 'Subject_Description_16': '',
-                   'Subject_or_Unit_17': '', 'Subject_Description_17': '',
-                   'Subject_or_Unit_18': '', 'Subject_Description_18': '',
-                   'Subject_or_Unit_19': '', 'Subject_Description_19': '',
-                   'Subject_or_Unit_20': '', 'Subject_Description_20': '',
-                   'Subject_or_Unit_21': '', 'Subject_Description_21': '',
-                   'Subject_or_Unit_22': '', 'Subject_Description_22': '',
-                   'Subject_or_Unit_23': '', 'Subject_Description_23': '',
-                   'Subject_or_Unit_24': '', 'Subject_Description_24': '',
-                   'Subject_or_Unit_25': '', 'Subject_Description_25': '',
-                   'Subject_or_Unit_26': '', 'Subject_Description_26': '',
-                   'Subject_or_Unit_27': '', 'Subject_Description_27': '',
-                   'Subject_or_Unit_28': '', 'Subject_Description_28': '',
-                   'Subject_or_Unit_29': '', 'Subject_Description_29': '',
-                   'Subject_or_Unit_30': '', 'Subject_Description_30': '',
-                   'Subject_or_Unit_31': '', 'Subject_Description_31': '',
-                   'Subject_or_Unit_32': '', 'Subject_Description_32': '',
-                   'Subject_or_Unit_33': '', 'Subject_Description_33': '',
-                   'Subject_or_Unit_34': '', 'Subject_Description_34': '',
-                   'Subject_or_Unit_35': '', 'Subject_Description_35': '',
-                   'Subject_or_Unit_36': '', 'Subject_Description_36': '',
-                   'Subject_or_Unit_37': '', 'Subject_Description_37': '',
-                   'Subject_or_Unit_38': '', 'Subject_Description_38': '',
-                   'Subject_or_Unit_39': '', 'Subject_Description_39': '',
-                   'Subject_or_Unit_40': '', 'Subject_Description_40': '',
-                   'Subject_or_Unit_41': '', 'Subject_Description_41': '',
-                   'Subject_or_Unit_42': '', 'Subject_Description_42': '',
-                   'Subject_or_Unit_43': '', 'Subject_Description_43': '',
-                   'Subject_or_Unit_44': '', 'Subject_Description_44': '',
-                   'Subject_or_Unit_45': '', 'Subject_Description_45': '',
-                   'Subject_or_Unit_46': '', 'Subject_Description_46': '',
-                   'Subject_or_Unit_47': '', 'Subject_Description_47': '',
-                   'Subject_or_Unit_48': '', 'Subject_Description_48': '',
-                   'Subject_or_Unit_49': '', 'Subject_Description_49': '',
-                   'Subject_or_Unit_50': '', 'Subject_Description_50': '',
-                   'Subject_or_Unit_51': '', 'Subject_Description_51': '',
-                   'Subject_or_Unit_52': '', 'Subject_Description_52': '',
-                   'Subject_or_Unit_53': '', 'Subject_Description_53': '',
-                   'Subject_or_Unit_54': '', 'Subject_Description_54': '',
-                   'Subject_or_Unit_55': '', 'Subject_Description_55': '',
-                   'Subject_or_Unit_56': '', 'Subject_Description_56': '',
-                   'Subject_or_Unit_57': '', 'Subject_Description_57': '',
-                   'Subject_or_Unit_58': '', 'Subject_Description_58': '',
-                   'Subject_or_Unit_59': '', 'Subject_Description_59': '',
-                   'Subject_or_Unit_60': '', 'Subject_Description_60': '',
-                   'Subject_or_Unit_61': '', 'Subject_Description_61': '',
-                   'Subject_or_Unit_62': '', 'Subject_Description_62': '',
-                   'Subject_or_Unit_63': '', 'Subject_Description_63': '',
-                   'Subject_or_Unit_64': '', 'Subject_Description_64': '',
-                   'Subject_or_Unit_65': '', 'Subject_Description_65': ''
+                   'Subject_Objective_1': '', 'Subject_Description_1': '',
+                   'Subject_or_Unit_2': '', 'Subject_Objective_2': '', 'Subject_Description_2': '',
+                   'Subject_or_Unit_3': '', 'Subject_Objective_3': '', 'Subject_Description_3': '',
+                   'Subject_or_Unit_4': '', 'Subject_Objective_4': '', 'Subject_Description_4': '',
+                   'Subject_or_Unit_5': '', 'Subject_Objective_5': '', 'Subject_Description_5': '',
+                   'Subject_or_Unit_6': '', 'Subject_Objective_6': '', 'Subject_Description_6': '',
+                   'Subject_or_Unit_7': '', 'Subject_Objective_7': '', 'Subject_Description_7': '',
+                   'Subject_or_Unit_8': '', 'Subject_Objective_8': '', 'Subject_Description_8': '',
+                   'Subject_or_Unit_9': '', 'Subject_Objective_9': '', 'Subject_Description_9': '',
+                   'Subject_or_Unit_10': '', 'Subject_Objective_10': '', 'Subject_Description_10': '',
+                   'Subject_or_Unit_11': '', 'Subject_Objective_11': '', 'Subject_Description_11': '',
+                   'Subject_or_Unit_12': '', 'Subject_Objective_12': '', 'Subject_Description_12': '',
+                   'Subject_or_Unit_13': '', 'Subject_Objective_13': '', 'Subject_Description_13': '',
+                   'Subject_or_Unit_14': '', 'Subject_Objective_14': '', 'Subject_Description_14': '',
+                   'Subject_or_Unit_15': '', 'Subject_Objective_15': '', 'Subject_Description_15': '',
+                   'Subject_or_Unit_16': '', 'Subject_Objective_16': '', 'Subject_Description_16': '',
+                   'Subject_or_Unit_17': '', 'Subject_Objective_17': '', 'Subject_Description_17': '',
+                   'Subject_or_Unit_18': '', 'Subject_Objective_18': '', 'Subject_Description_18': '',
+                   'Subject_or_Unit_19': '', 'Subject_Objective_19': '', 'Subject_Description_19': '',
+                   'Subject_or_Unit_20': '', 'Subject_Objective_20': '', 'Subject_Description_20': '',
+                   'Subject_or_Unit_21': '', 'Subject_Objective_21': '', 'Subject_Description_21': '',
+                   'Subject_or_Unit_22': '', 'Subject_Objective_22': '', 'Subject_Description_22': '',
+                   'Subject_or_Unit_23': '', 'Subject_Objective_23': '', 'Subject_Description_23': '',
+                   'Subject_or_Unit_24': '', 'Subject_Objective_24': '', 'Subject_Description_24': '',
+                   'Subject_or_Unit_25': '', 'Subject_Objective_25': '', 'Subject_Description_25': '',
+                   'Subject_or_Unit_26': '', 'Subject_Objective_26': '', 'Subject_Description_26': '',
+                   'Subject_or_Unit_27': '', 'Subject_Objective_27': '', 'Subject_Description_27': '',
+                   'Subject_or_Unit_28': '', 'Subject_Objective_28': '', 'Subject_Description_28': '',
+                   'Subject_or_Unit_29': '', 'Subject_Objective_29': '', 'Subject_Description_29': '',
+                   'Subject_or_Unit_30': '', 'Subject_Objective_30': '', 'Subject_Description_30': '',
+                   'Subject_or_Unit_31': '', 'Subject_Objective_31': '', 'Subject_Description_31': '',
+                   'Subject_or_Unit_32': '', 'Subject_Objective_32': '', 'Subject_Description_32': '',
+                   'Subject_or_Unit_33': '', 'Subject_Objective_33': '', 'Subject_Description_33': '',
+                   'Subject_or_Unit_34': '', 'Subject_Objective_34': '', 'Subject_Description_34': '',
+                   'Subject_or_Unit_35': '', 'Subject_Objective_35': '', 'Subject_Description_35': '',
+                   'Subject_or_Unit_36': '', 'Subject_Objective_36': '', 'Subject_Description_36': '',
+                   'Subject_or_Unit_37': '', 'Subject_Objective_37': '', 'Subject_Description_37': '',
+                   'Subject_or_Unit_38': '', 'Subject_Objective_38': '', 'Subject_Description_38': '',
+                   'Subject_or_Unit_39': '', 'Subject_Objective_39': '', 'Subject_Description_39': '',
+                   'Subject_or_Unit_40': '', 'Subject_Objective_40': '', 'Subject_Description_40': ''
                    }
     actual_cities = []
-    index = index + 1
     browser.get(each_url)
     pure_url = each_url.strip()
     each_url = browser.page_source
@@ -248,7 +219,7 @@ for each_url in course_links_file:
     # Course-name
     course_name = soup.find("h1")
     if course_name:
-        course_title = tag_text(course_name)
+        course_title = tag_text(course_name).replace("HLT52015","").strip()
         course_data['Course'] = course_title
 
     # DECIDE THE LEVEL CODE
@@ -276,8 +247,6 @@ for each_url in course_links_file:
             for i in possible_cities:
                 if i in campu:
                     actual_cities.append(possible_cities[i])
-    else:
-        print("Find city")
 
     # IELTS
     iels = soup.select(
@@ -317,7 +286,7 @@ for each_url in course_links_file:
     else:
         course_data['Career_Outcomes/path'] = "N/A"
 
-    # Online
+    # Online/Offline
     if 'Online' in actual_cities:
         course_data['Online'] = "Yes"
         course_data['Offline'] = "No"
@@ -331,7 +300,7 @@ for each_url in course_links_file:
     # International fee from (https://acnm.s3-ap-southeast-2.amazonaws.com/pub/DOCID-2102554854-15571.pdf)
     if "massage" in course_nam:
         fee = soup.select(
-            "body > main > div:nth-child(1) > div.row-1-2 > div:nth-child(1) > section > div:nth-child(5) > div.outline-body > p:nth-child(1)")
+            "section:nth-of-type(3) p:nth-of-type(1)")
         local_money_r(fee)
         int_money_r(fee)
         course_data['Availability'] = "A"
@@ -375,6 +344,7 @@ for each_url in course_links_file:
     else:
         course_data['Blended'] = "No"
 
+    #Subject Units
     delay_ = 15
     i = 1
     t = 1
@@ -383,16 +353,19 @@ for each_url in course_links_file:
         while condition:
             subject_block = browser.find_element_by_xpath('//*[@id="course-table-body"]') \
                 .find_elements_by_css_selector('td:nth-of-type(2)')
-
+            subject_description = browser.find_element_by_xpath('//*[@id="course-table-body"]') \
+                .find_elements_by_css_selector('td:nth-of-type(1)')
             for so in subject_block:
                 course_data[f'Subject_or_Unit_{i}'] = so.text.strip()
                 i = i + 1
-            subject_description = browser.find_element_by_xpath('//*[@id="course-table-body"]') \
-                .find_elements_by_css_selector('td:nth-of-type(1)')
+                if i == 40:
+                    break
 
             for to in subject_description:
                 course_data[f'Subject_Description_{t}'] = to.text.strip()
                 t = t + 1
+                if t == 40:
+                    break
             try:
                 browser.execute_script("arguments[0].click();", WebDriverWait(browser, delay_).until(
                     EC.element_to_be_clickable((By.XPATH, '//*[@id="semester-control-next"]'))))
@@ -400,7 +373,6 @@ for each_url in course_links_file:
                 condition = False
     except Exception:
         pass
-    print(course_data['Website'])
 
     for i in actual_cities:
         course_data['City'] = possible_cities[i.lower()]
@@ -410,76 +382,52 @@ for each_url in course_links_file:
 print(*course_data_all, sep='\n')
 
 desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
-                      'Local_Fees', 'Int_Fees', 'Currency', 'Currency_Time',
+                      'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
                       'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
-                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2',
+                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
+                      'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
                       'Online', 'Offline', 'Distance', 'Face_to_Face', 'Blended', 'Remarks',
-                      'Subject_or_Unit_1', 'Subject_Description_1',
-                      'Subject_or_Unit_2', 'Subject_Description_2',
-                      'Subject_or_Unit_3', 'Subject_Description_3',
-                      'Subject_or_Unit_4', 'Subject_Description_4',
-                      'Subject_or_Unit_5', 'Subject_Description_5',
-                      'Subject_or_Unit_6', 'Subject_Description_6',
-                      'Subject_or_Unit_7', 'Subject_Description_7',
-                      'Subject_or_Unit_8', 'Subject_Description_8',
-                      'Subject_or_Unit_9', 'Subject_Description_9',
-                      'Subject_or_Unit_10', 'Subject_Description_10',
-                      'Subject_or_Unit_11', 'Subject_Description_11',
-                      'Subject_or_Unit_12', 'Subject_Description_12',
-                      'Subject_or_Unit_13', 'Subject_Description_13',
-                      'Subject_or_Unit_14', 'Subject_Description_14',
-                      'Subject_or_Unit_15', 'Subject_Description_15',
-                      'Subject_or_Unit_16', 'Subject_Description_16',
-                      'Subject_or_Unit_17', 'Subject_Description_17',
-                      'Subject_or_Unit_18', 'Subject_Description_18',
-                      'Subject_or_Unit_19', 'Subject_Description_19',
-                      'Subject_or_Unit_20', 'Subject_Description_20',
-                      'Subject_or_Unit_21', 'Subject_Description_21',
-                      'Subject_or_Unit_22', 'Subject_Description_22',
-                      'Subject_or_Unit_23', 'Subject_Description_23',
-                      'Subject_or_Unit_24', 'Subject_Description_24',
-                      'Subject_or_Unit_25', 'Subject_Description_25',
-                      'Subject_or_Unit_26', 'Subject_Description_26',
-                      'Subject_or_Unit_27', 'Subject_Description_27',
-                      'Subject_or_Unit_28', 'Subject_Description_28',
-                      'Subject_or_Unit_29', 'Subject_Description_29',
-                      'Subject_or_Unit_30', 'Subject_Description_30',
-                      'Subject_or_Unit_31', 'Subject_Description_31',
-                      'Subject_or_Unit_32', 'Subject_Description_32',
-                      'Subject_or_Unit_33', 'Subject_Description_33',
-                      'Subject_or_Unit_34', 'Subject_Description_34',
-                      'Subject_or_Unit_35', 'Subject_Description_35',
-                      'Subject_or_Unit_36', 'Subject_Description_36',
-                      'Subject_or_Unit_37', 'Subject_Description_37',
-                      'Subject_or_Unit_38', 'Subject_Description_38',
-                      'Subject_or_Unit_39', 'Subject_Description_39',
-                      'Subject_or_Unit_40', 'Subject_Description_40',
-                      'Subject_or_Unit_41', 'Subject_Description_41',
-                      'Subject_or_Unit_42', 'Subject_Description_42',
-                      'Subject_or_Unit_43', 'Subject_Description_43',
-                      'Subject_or_Unit_44', 'Subject_Description_44',
-                      'Subject_or_Unit_45', 'Subject_Description_45',
-                      'Subject_or_Unit_46', 'Subject_Description_46',
-                      'Subject_or_Unit_47', 'Subject_Description_47',
-                      'Subject_or_Unit_48', 'Subject_Description_48',
-                      'Subject_or_Unit_49', 'Subject_Description_49',
-                      'Subject_or_Unit_50', 'Subject_Description_50',
-                      'Subject_or_Unit_51', 'Subject_Description_51',
-                      'Subject_or_Unit_52', 'Subject_Description_52',
-                      'Subject_or_Unit_53', 'Subject_Description_53',
-                      'Subject_or_Unit_54', 'Subject_Description_54',
-                      'Subject_or_Unit_55', 'Subject_Description_55',
-                      'Subject_or_Unit_56', 'Subject_Description_56',
-                      'Subject_or_Unit_57', 'Subject_Description_57',
-                      'Subject_or_Unit_58', 'Subject_Description_58',
-                      'Subject_or_Unit_59', 'Subject_Description_59',
-                      'Subject_or_Unit_60', 'Subject_Description_60',
-                      'Subject_or_Unit_61', 'Subject_Description_61',
-                      'Subject_or_Unit_62', 'Subject_Description_62',
-                      'Subject_or_Unit_63', 'Subject_Description_63',
-                      'Subject_or_Unit_64', 'Subject_Description_64',
-                      'Subject_or_Unit_65', 'Subject_Description_65'
+                      'Subject_or_Unit_1', 'Subject_Objective_1', 'Subject_Description_1',
+                      'Subject_or_Unit_2', 'Subject_Objective_2', 'Subject_Description_2',
+                      'Subject_or_Unit_3', 'Subject_Objective_3', 'Subject_Description_3',
+                      'Subject_or_Unit_4', 'Subject_Objective_4', 'Subject_Description_4',
+                      'Subject_or_Unit_5', 'Subject_Objective_5', 'Subject_Description_5',
+                      'Subject_or_Unit_6', 'Subject_Objective_6', 'Subject_Description_6',
+                      'Subject_or_Unit_7', 'Subject_Objective_7', 'Subject_Description_7',
+                      'Subject_or_Unit_8', 'Subject_Objective_8', 'Subject_Description_8',
+                      'Subject_or_Unit_9', 'Subject_Objective_9', 'Subject_Description_9',
+                      'Subject_or_Unit_10', 'Subject_Objective_10', 'Subject_Description_10',
+                      'Subject_or_Unit_11', 'Subject_Objective_11', 'Subject_Description_11',
+                      'Subject_or_Unit_12', 'Subject_Objective_12', 'Subject_Description_12',
+                      'Subject_or_Unit_13', 'Subject_Objective_13', 'Subject_Description_13',
+                      'Subject_or_Unit_14', 'Subject_Objective_14', 'Subject_Description_14',
+                      'Subject_or_Unit_15', 'Subject_Objective_15', 'Subject_Description_15',
+                      'Subject_or_Unit_16', 'Subject_Objective_16', 'Subject_Description_16',
+                      'Subject_or_Unit_17', 'Subject_Objective_17', 'Subject_Description_17',
+                      'Subject_or_Unit_18', 'Subject_Objective_18', 'Subject_Description_18',
+                      'Subject_or_Unit_19', 'Subject_Objective_19', 'Subject_Description_19',
+                      'Subject_or_Unit_20', 'Subject_Objective_20', 'Subject_Description_20',
+                      'Subject_or_Unit_21', 'Subject_Objective_21', 'Subject_Description_21',
+                      'Subject_or_Unit_22', 'Subject_Objective_22', 'Subject_Description_22',
+                      'Subject_or_Unit_23', 'Subject_Objective_23', 'Subject_Description_23',
+                      'Subject_or_Unit_24', 'Subject_Objective_24', 'Subject_Description_24',
+                      'Subject_or_Unit_25', 'Subject_Objective_25', 'Subject_Description_25',
+                      'Subject_or_Unit_26', 'Subject_Objective_26', 'Subject_Description_26',
+                      'Subject_or_Unit_27', 'Subject_Objective_27', 'Subject_Description_27',
+                      'Subject_or_Unit_28', 'Subject_Objective_28', 'Subject_Description_28',
+                      'Subject_or_Unit_29', 'Subject_Objective_29', 'Subject_Description_29',
+                      'Subject_or_Unit_30', 'Subject_Objective_30', 'Subject_Description_30',
+                      'Subject_or_Unit_31', 'Subject_Objective_31', 'Subject_Description_31',
+                      'Subject_or_Unit_32', 'Subject_Objective_32', 'Subject_Description_32',
+                      'Subject_or_Unit_33', 'Subject_Objective_33', 'Subject_Description_33',
+                      'Subject_or_Unit_34', 'Subject_Objective_34', 'Subject_Description_34',
+                      'Subject_or_Unit_35', 'Subject_Objective_35', 'Subject_Description_35',
+                      'Subject_or_Unit_36', 'Subject_Objective_36', 'Subject_Description_36',
+                      'Subject_or_Unit_37', 'Subject_Objective_37', 'Subject_Description_37',
+                      'Subject_or_Unit_38', 'Subject_Objective_38', 'Subject_Description_38',
+                      'Subject_or_Unit_39', 'Subject_Objective_39', 'Subject_Description_39',
+                      'Subject_or_Unit_40', 'Subject_Objective_40', 'Subject_Description_40'
                       ]
 
 # tabulate our data
