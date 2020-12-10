@@ -18,16 +18,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import re
 
 
-def get_page(url):
-    try:
-        r = requests.get(url)
-        if r.status_code == 200:
-            return bs4.BeautifulSoup(r.content, 'lxml')
-    except Exception as e:
-        pass
-    return None
-
-
 def clean_tags(soup_):
     for tag in soup_.find_all("tr", class_='hidethis'):
         tag.decompose()
@@ -47,34 +37,46 @@ browser = webdriver.Chrome(executable_path=exec_path, options=option)
 # MAIN ROUTINE
 course_type_links = []
 course_links = []
-each_url = 'https://www.newcastle.edu.au/degrees#filter=level_postgraduate,location_callaghan,location_newcastle_city,location_central_coast,location_sydney,type_single'
+each_url = 'https://www.newcastle.edu.au/degrees#filter=level_postgraduate,location_callaghan,location_newcastle_city,location_central_coast,location_sydney,location_singapore,location_online,type_single'
+#each_url = 'https://www.newcastle.edu.au/degrees#filter=level_postgraduate,location_callaghan,location_newcastle_city,location_central_coast,location_sydney,type_single'
 main_url = 'https://www.newcastle.edu.au/'
 browser.get(each_url)
-pure_url = each_url.strip()
 each_url = browser.page_source
 
 soup = bs4.BeautifulSoup(each_url, 'lxml')
 clean_tags(soup)
 
-each_courses_links = soup.find_all('a', class_='degree-link')
-for tag in each_courses_links:
-    var = main_url + tag['href']
-    course_links.append(var)
 
-
-print(len(each_courses_links))
-
-course_links_file_path = os.getcwd().replace('\\', '/') + '/UNC_PG_links.txt'
-course_links_file = open(course_links_file_path, 'w')
-
-for i in course_links:
-    if i is not None and i is not "" and i is not "\n":
-        if i == course_links[-1]:
-            course_links_file.write(i.strip())
+def all_courses():
+    each_courses_links = soup.find_all('a', class_='degree-link')
+    for tag in each_courses_links:
+        var = main_url + tag['href']
+        if var not in course_links:
+            if "teach-out" in var or "exit-award" in var:
+                del var
+            else:
+                course_links.append(var)
         else:
-            course_links_file.write(i.strip()+'\n')
+            del var
 
-course_links_file.close()
-print(*course_links, sep='\n')
+    print(len(course_links))
+    print(course_links)
 
+
+def save_courses(link_list, filename_):
+    course_links_file_path = os.getcwd().replace('\\', '/') + filename_
+    course_links_file = open(course_links_file_path, 'w')
+
+    for i in link_list:
+        if i is not None and i is not "" and i is not "\n":
+            if i == link_list[-1]:
+                course_links_file.write(i.strip())
+            else:
+                course_links_file.write(i.strip() + '\n')
+
+    course_links_file.close()
+
+
+all_courses()
+save_courses(course_links, '/UNC_PG_links.txt')
 browser.quit()
