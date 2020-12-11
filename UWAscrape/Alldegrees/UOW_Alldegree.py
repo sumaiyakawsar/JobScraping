@@ -99,16 +99,13 @@ def local_fees(local_fee):
             course_data['Local_Fees'] = ""
 
 
-index = 0
 for each_url in course_links_file:
-    index = index + 1
-    course_data = {'Level_Code': '', 'University': 'University of Wollongong', 'City': '',
-                   'Course': '', 'Faculty': '', 'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD',
-                   'Currency_Time': 'Years', 'Duration': '', 'Duration_Time': '', 'Full_Time': '',
-                   'Part_Time': '', 'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS',
-                   'Prerequisite_3': 'Equivalent AQF Level', 'Prerequisite_1_grade_1': '',
-                   'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': 'Year 12', 'Website': '',
-                   'Course_Lang': 'English', 'Availability': '', 'Description': '',
+    course_data = {'Level_Code': '', 'University': 'University of Wollongong', 'City': '', 'Course': '', 'Faculty': '',
+                   'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
+                   'Duration': '', 'Duration_Time': '', 'Full_Time': '', 'Part_Time': '',
+                   'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': 'Equivalent AQF Level',
+                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': 'Year 12',
+                   'Website': '', 'Course_Lang': 'English', 'Availability': '', 'Description': '',
                    'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
                    'Subject_or_Unit_1': '', 'Subject_Objective_1': '', 'Subject_Description_1': '',
@@ -174,6 +171,10 @@ for each_url in course_links_file:
     else:
         course_data['Course'] = ""
 
+    if 'Honours' in course_title and 'Bachelor' in course_title:
+        course_level = 'Bachelor honours'
+    else:
+        course_level = course_title
     # Faculty
     faculty_column = soup.select("#course-info > div > div:nth-child(2) > p:nth-child(2)")
     if faculty_column:
@@ -213,7 +214,7 @@ for each_url in course_links_file:
     # DECIDE THE LEVEL CODE
     for i in level_key:
         for j in level_key[i]:
-            if j in course_data['Course']:
+            if j in course_level:
                 course_data['Level_Code'] = i
 
     # Duration/Duration Time/FullTime/Parttime/
@@ -436,23 +437,67 @@ for each_url in course_links_file:
     else:
         course_data['Remarks'] = "NA"
     """
-    # Subjects
-    button = soup.select_one("#structure > div > div > div > a")
-    if button:
-        subject_handbook_url = button["href"]
-        browser.get(subject_handbook_url)
-        subject_handbook_url = browser.page_source
-        time.sleep(2)
-        soup_handbook = bs4.BeautifulSoup(subject_handbook_url, 'lxml')
+    # Subjects #there were too many Forbidden pages # Complicated
+    subject_handbook_link = []
+    subjects = []
+    try:
+        button = browser.find_element_by_link_text("Course Handbook")
+        if button:
+            subject_handbook = button.get_property("href")
+            subject_handbook_link.append(subject_handbook)
+    except Exception:
+        pass
 
-        units = soup_handbook.find("div",class_="css-1wcbyqm-Box-CardBody-CSBody-css")
-        if units:
-            unit = units.find_all("a")
-            
-    else:
-        print("Cant find", course_data['Website'])
+    for each_handbook in subject_handbook_link:
+        browser.get(each_handbook)
+        each_handbook = browser.page_source
+        soup_handbook = bs4.BeautifulSoup(each_handbook, 'lxml')
+        time.sleep(4)
+        try:
+            expand_button = browser.find_element_by_xpath('//*[@id="curriculumStructure_expandAll"]/button')
+            if expand_button:
+                expand_button.click()
+                time.sleep(1)
+                
+            sub_names = browser.find_elements_by_css_selector("a.cs-list-item")
+            for subsss in sub_names:
+                subject_link= subsss.get_property("href")
+                print(subject_link)
+        except Exception:
+            pass
+        
+    
+    i = 1
+    for each_unit in subjects:
+        browser.get(each_unit)
+        each_unit = browser.page_source
+        subject_page = bs4.BeautifulSoup(each_unit, 'lxml')
+        time.sleep(3)
+
+        subject_name = subject_page.find("h2")
+        if subject_name:
+            course_title = subject_name.text
+            course_data[f'Subject_or_Unit_{i}'] = course_title
+
+        subject_description = subject_page.select(
+            "#Subjectdescription > div.css-1x8hb4i-Box-CardBody.e1q64pes0 > div.css-17kegqk-ReadMoreContainer.e1tb03p81 > div:nth-child(2) > p")
+        if subject_description:
+            for subject_details in subject_description:
+                course_data[f'Subject_Objective_{i}'] = subject_details.text.strip()
+
+        outcomes = []
+        subject_desc = subject_page.find("div", class_="css-ccobfo-Box-Card-EmptyCard-SAccordionContainer")
+        if subject_desc:
+            outcomes.append(subject_desc)
+            course_data[f'Subject_Description_{i}'] = ''.join(outcomes).strip()
+
+        print(i, course_data[f'Subject_or_Unit_{i}'])
+        print(i, course_data[f'Subject_Objective_{i}'])
+        i += 1
+    print( len(subjects), course_data['Website'])
+
     """
-
+    print(course_data['Website'])
     for i in actual_cities:
         course_data['City'] = main_cities[i.lower()]
         course_data_all.append(copy.deepcopy(course_data))
@@ -460,8 +505,8 @@ for each_url in course_links_file:
 
 print(*course_data_all, sep='\n')
 
-desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty', 'Local_Fees', 'Int_Fees',
-                      'Currency', 'Currency_Time',
+desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
+                      'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
                       'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
                       'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
                       'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
