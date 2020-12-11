@@ -436,68 +436,8 @@ for each_url in course_links_file:
             course_data['Remarks'] = tag_text(each_remark).replace("\n", " ").strip()
     else:
         course_data['Remarks'] = "NA"
-    """
-    # Subjects #there were too many Forbidden pages # Complicated
-    subject_handbook_link = []
-    subjects = []
-    try:
-        button = browser.find_element_by_link_text("Course Handbook")
-        if button:
-            subject_handbook = button.get_property("href")
-            subject_handbook_link.append(subject_handbook)
-    except Exception:
-        pass
-
-    for each_handbook in subject_handbook_link:
-        browser.get(each_handbook)
-        each_handbook = browser.page_source
-        soup_handbook = bs4.BeautifulSoup(each_handbook, 'lxml')
-        time.sleep(4)
-        try:
-            expand_button = browser.find_element_by_xpath('//*[@id="curriculumStructure_expandAll"]/button')
-            if expand_button:
-                expand_button.click()
-                time.sleep(1)
-                
-            sub_names = browser.find_elements_by_css_selector("a.cs-list-item")
-            for subsss in sub_names:
-                subject_link= subsss.get_property("href")
-                print(subject_link)
-        except Exception:
-            pass
-        
+  
     
-    i = 1
-    for each_unit in subjects:
-        browser.get(each_unit)
-        each_unit = browser.page_source
-        subject_page = bs4.BeautifulSoup(each_unit, 'lxml')
-        time.sleep(3)
-
-        subject_name = subject_page.find("h2")
-        if subject_name:
-            course_title = subject_name.text
-            course_data[f'Subject_or_Unit_{i}'] = course_title
-
-        subject_description = subject_page.select(
-            "#Subjectdescription > div.css-1x8hb4i-Box-CardBody.e1q64pes0 > div.css-17kegqk-ReadMoreContainer.e1tb03p81 > div:nth-child(2) > p")
-        if subject_description:
-            for subject_details in subject_description:
-                course_data[f'Subject_Objective_{i}'] = subject_details.text.strip()
-
-        outcomes = []
-        subject_desc = subject_page.find("div", class_="css-ccobfo-Box-Card-EmptyCard-SAccordionContainer")
-        if subject_desc:
-            outcomes.append(subject_desc)
-            course_data[f'Subject_Description_{i}'] = ''.join(outcomes).strip()
-
-        print(i, course_data[f'Subject_or_Unit_{i}'])
-        print(i, course_data[f'Subject_Objective_{i}'])
-        i += 1
-    print( len(subjects), course_data['Website'])
-
-    """
-    print(course_data['Website'])
     for i in actual_cities:
         course_data['City'] = main_cities[i.lower()]
         course_data_all.append(copy.deepcopy(course_data))
