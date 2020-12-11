@@ -42,6 +42,7 @@ course_data_all = []
 
 level_key = TemplateData.level_key  # dictionary of course levels
 
+
 def tag_text(string_):
     return string_.get_text().__str__().strip()
 
@@ -121,9 +122,9 @@ for each_url in course_links_file:
     course_data = {'Level_Code': '', 'University': 'Moore Theological College', 'City': 'Sydney', 'Course': '',
                    'Faculty': '', 'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
                    'Duration': '', 'Duration_Time': '', 'Full_Time': '', 'Part_Time': '',
-                   'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS',
-                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '',
-                   'Website': '', 'Course_Lang': 'English', 'Availability': 'A', 'Description': '',
+                   'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': '',
+                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
+                   'Website': '', 'Course_Lang': 'English', 'Availability': '', 'Description': '',
                    'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': '', 'Offline': 'Yes', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
                    'Subject_or_Unit_1': '', 'Subject_Objective_1': '', 'Subject_Description_1': '',
@@ -216,6 +217,8 @@ for each_url in course_links_file:
 
     course_data['Description'] = ''.join(description)
 
+    course_data['Availability'] = "A"
+
     # IELTS/Local fees
     if "ADIP" in course_data['Level_Code'] or "BA" in course_data['Level_Code']:
         course_data['Prerequisite_2_grade_2'] = 7.0
@@ -252,7 +255,8 @@ print(*course_data_all, sep='\n')
 desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
                       'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
                       'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
-                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2',
+                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
+                      'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
                       'Online', 'Offline', 'Distance', 'Face_to_Face', 'Blended', 'Remarks',
                       'Subject_or_Unit_1', 'Subject_Objective_1', 'Subject_Description_1',
