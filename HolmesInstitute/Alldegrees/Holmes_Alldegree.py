@@ -34,7 +34,6 @@ course_links_file = open(course_links_file_path, 'r')
 csv_file_path = Path(os.getcwd().replace('\\', '/'))
 csv_file = csv_file_path.parent.__str__() + '/Holmes_allcourses.csv'
 
-
 possible_cities = {'sydney': 'Sydney',
                    'melbourne': 'Melbourne',
                    'brisbane': 'Brisbane',
@@ -82,10 +81,11 @@ def online(word_):
 
 for each_url in course_links_file:
     course_data = {'Level_Code': '', 'University': 'Holmes Institute', 'City': '',
-                   'Course': '', 'Faculty': '', 'Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
+                   'Course': '', 'Faculty': '',
+                   'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
                    'Duration': '', 'Duration_Time': '', 'Full_Time': 'Yes', 'Part_Time': 'No',
-                   'Prerequisite_1': '', 'Prerequisite_2': '',
-                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '',
+                   'Prerequisite_1': '', 'Prerequisite_2': '', 'Prerequisite_3': '',
+                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
                    'Website': '', 'Course_Lang': 'English', 'Availability': 'A',
                    'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': 'No', 'Offline': 'Yes', 'Distance': 'No', 'Face_to_Face': 'Yes', 'Blended': 'No',
@@ -119,7 +119,17 @@ for each_url in course_links_file:
                    'Subject_or_Unit_27': '', 'Subject_Objective_27': '', 'Subject_Description_27': '',
                    'Subject_or_Unit_28': '', 'Subject_Objective_28': '', 'Subject_Description_28': '',
                    'Subject_or_Unit_29': '', 'Subject_Objective_29': '', 'Subject_Description_29': '',
-                   'Subject_or_Unit_30': '', 'Subject_Objective_30': '', 'Subject_Description_30': ''
+                   'Subject_or_Unit_30': '', 'Subject_Objective_30': '', 'Subject_Description_30': '',
+                   'Subject_or_Unit_31': '', 'Subject_Objective_31': '', 'Subject_Description_31': '',
+                   'Subject_or_Unit_32': '', 'Subject_Objective_32': '', 'Subject_Description_32': '',
+                   'Subject_or_Unit_33': '', 'Subject_Objective_33': '', 'Subject_Description_33': '',
+                   'Subject_or_Unit_34': '', 'Subject_Objective_34': '', 'Subject_Description_34': '',
+                   'Subject_or_Unit_35': '', 'Subject_Objective_35': '', 'Subject_Description_35': '',
+                   'Subject_or_Unit_36': '', 'Subject_Objective_36': '', 'Subject_Description_36': '',
+                   'Subject_or_Unit_37': '', 'Subject_Objective_37': '', 'Subject_Description_37': '',
+                   'Subject_or_Unit_38': '', 'Subject_Objective_38': '', 'Subject_Description_38': '',
+                   'Subject_or_Unit_39': '', 'Subject_Objective_39': '', 'Subject_Description_39': '',
+                   'Subject_or_Unit_40': '', 'Subject_Objective_40': '', 'Subject_Description_40': ''
 
                    }
     actual_cities = []
@@ -151,14 +161,14 @@ for each_url in course_links_file:
                 course_data['Level_Code'] = i
 
     # Description
-
     course_desc = soup.select("#content_page_item > p:nth-of-type(1)")
     if "Bachelor of Business" in course_data['Course']:
         description(course_desc)
         course_data['Duration'] = 3
         course_data['Duration_Time'] = "Years"
 
-        course_data['Fees'] = 55200
+        course_data['Int_Fees'] = 55200
+        course_data['Local_Fees'] = 55200
 
         s = 1
         table_course = soup.select("p:nth-of-type(n+21) strong")
@@ -202,7 +212,8 @@ for each_url in course_links_file:
         course_data['Duration'] = 3
         course_data['Duration_Time'] = "Years"
 
-        course_data['Fees'] = 55200
+        course_data['Int_Fees'] = 55200
+        course_data['Local_Fees'] = 55200
 
         career = soup.select("#content_page_item p:nth-of-type(2)")
         if career:
@@ -248,7 +259,8 @@ for each_url in course_links_file:
         course_data['Duration'] = 3
         course_data['Duration_Time'] = "Years"
 
-        course_data['Fees'] = 55200
+        course_data['Int_Fees'] = 55200
+        course_data['Local_Fees'] = 55200
 
         s = 1
         table_course = soup.select("p:nth-of-type(n+7) strong")
@@ -326,8 +338,8 @@ for each_url in course_links_file:
         # Duration
         course_data['Duration'] = 1
         course_data['Duration_Time'] = "Year"
-        course_data['Fees'] = 19200
-
+        course_data['Int_Fees'] = 19200
+        course_data['Local_Fees'] = 19200
         s = 1
         table_course = soup.select("tr:nth-of-type(n+2) td:nth-of-type(2)")
         for so in table_course:
@@ -397,8 +409,8 @@ for each_url in course_links_file:
 
         course_data['Duration'] = 1
         course_data['Duration_Time'] = "Year"
-
-        course_data['Fees'] = 28800
+        course_data['Int_Fees'] = 28800
+        course_data['Local_Fees'] = 28800
 
         s = 1
         table_course = soup.select("tr:nth-of-type(n+2) td:nth-of-type(2)")
@@ -473,8 +485,8 @@ for each_url in course_links_file:
 
         course_data['Duration'] = 1
         course_data['Duration_Time'] = "Year"
-
-        course_data['Fees'] = 28800
+        course_data['Int_Fees'] = 28800
+        course_data['Local_Fees'] = 28800
 
         s = 1
         table_course = soup.find_all("strong")
@@ -511,7 +523,8 @@ for each_url in course_links_file:
         course_data['Duration'] = 1
         course_data['Duration_Time'] = "Year"
 
-        course_data['Fees'] = 38400
+        course_data['Int_Fees'] = 38400
+        course_data['Local_Fees'] = 38400
 
         cities = soup.select("[width='630'] td")
         for cit in cities:
@@ -597,8 +610,6 @@ for each_url in course_links_file:
         if course_data['Subject_or_Unit_20'] in course_description[28]:
             course_data['Subject_Objective_20'] = course_description[28]
 
-    print(course_data['Course'], course_data['Fees'], course_data['Website'])
-
     for i in actual_cities:
         course_data['City'] = possible_cities[i.lower()]
         course_data_all.append(copy.deepcopy(course_data))
@@ -606,10 +617,11 @@ for each_url in course_links_file:
 
 print(*course_data_all, sep='\n')
 
-desired_order_list = ['Level_Code', 'University', 'City',
-                      'Course', 'Faculty', 'Fees', 'Currency', 'Currency_Time',
+desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
+                      'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
                       'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
-                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2',
+                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
+                      'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
                       'Online', 'Offline', 'Distance', 'Face_to_Face', 'Blended', 'Remarks',
                       'Subject_or_Unit_1', 'Subject_Objective_1', 'Subject_Description_1',
@@ -641,7 +653,17 @@ desired_order_list = ['Level_Code', 'University', 'City',
                       'Subject_or_Unit_27', 'Subject_Objective_27', 'Subject_Description_27',
                       'Subject_or_Unit_28', 'Subject_Objective_28', 'Subject_Description_28',
                       'Subject_or_Unit_29', 'Subject_Objective_29', 'Subject_Description_29',
-                      'Subject_or_Unit_30', 'Subject_Objective_30', 'Subject_Description_30'
+                      'Subject_or_Unit_30', 'Subject_Objective_30', 'Subject_Description_30',
+                      'Subject_or_Unit_31', 'Subject_Objective_31', 'Subject_Description_31',
+                      'Subject_or_Unit_32', 'Subject_Objective_32', 'Subject_Description_32',
+                      'Subject_or_Unit_33', 'Subject_Objective_33', 'Subject_Description_33',
+                      'Subject_or_Unit_34', 'Subject_Objective_34', 'Subject_Description_34',
+                      'Subject_or_Unit_35', 'Subject_Objective_35', 'Subject_Description_35',
+                      'Subject_or_Unit_36', 'Subject_Objective_36', 'Subject_Description_36',
+                      'Subject_or_Unit_37', 'Subject_Objective_37', 'Subject_Description_37',
+                      'Subject_or_Unit_38', 'Subject_Objective_38', 'Subject_Description_38',
+                      'Subject_or_Unit_39', 'Subject_Objective_39', 'Subject_Description_39',
+                      'Subject_or_Unit_40', 'Subject_Objective_40', 'Subject_Description_40'
 
                       ]
 # tabulate our data
@@ -649,4 +671,3 @@ df = pd.DataFrame(course_data_all, columns=desired_order_list)
 df.to_csv(csv_file, index=False)
 
 browser.quit()
-
