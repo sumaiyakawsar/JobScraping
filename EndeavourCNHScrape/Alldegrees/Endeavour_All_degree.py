@@ -164,7 +164,7 @@ for each_url in course_links_file:
                    'Prerequisite_2_grade_2': '', 'Website': '', 'Course_Lang': 'English',
                    'Availability': '', 'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
-                   'Subject_Objective_1': '', 'Subject_Description_1': '',
+                   'Subject_or_Unit_1':'',  'Subject_Objective_1': '', 'Subject_Description_1': '',
                    'Subject_or_Unit_2': '', 'Subject_Objective_2': '', 'Subject_Description_2': '',
                    'Subject_or_Unit_3': '', 'Subject_Objective_3': '', 'Subject_Description_3': '',
                    'Subject_or_Unit_4': '', 'Subject_Objective_4': '', 'Subject_Description_4': '',
