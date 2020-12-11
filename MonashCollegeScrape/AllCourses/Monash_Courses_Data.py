@@ -46,6 +46,57 @@ def has_numbers(input_string):
     return any(char.isdigit() for char in input_string)
 
 
+course_data = {'Level_Code': '', 'University': 'Monash College',
+               'City': '', 'Course': '', 'Faculty': '',
+               'Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
+               'Duration': '', 'Duration_Time': '', 'Full_Time': 'Yes', 'Part_Time': 'No',
+               'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': 'Equivalent AQF Degree Level',
+               'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
+               'Website': '', 'Course_Lang': 'English',
+               'Availability': 'A', 'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
+               'Online': 'No', 'Offline': '', 'Distance': 'No', 'Face_to_Face': '', 'Blended': 'No', 'Remarks': '',
+               'Subject_or_Unit_1': '', 'Subject_Objective_1': '', 'Subject_Description_1': '',
+               'Subject_or_Unit_2': '', 'Subject_Objective_2': '', 'Subject_Description_2': '',
+               'Subject_or_Unit_3': '', 'Subject_Objective_3': '', 'Subject_Description_3': '',
+               'Subject_or_Unit_4': '', 'Subject_Objective_4': '', 'Subject_Description_4': '',
+               'Subject_or_Unit_5': '', 'Subject_Objective_5': '', 'Subject_Description_5': '',
+               'Subject_or_Unit_6': '', 'Subject_Objective_6': '', 'Subject_Description_6': '',
+               'Subject_or_Unit_7': '', 'Subject_Objective_7': '', 'Subject_Description_7': '',
+               'Subject_or_Unit_8': '', 'Subject_Objective_8': '', 'Subject_Description_8': '',
+               'Subject_or_Unit_9': '', 'Subject_Objective_9': '', 'Subject_Description_9': '',
+               'Subject_or_Unit_10': '', 'Subject_Objective_10': '', 'Subject_Description_10': '',
+               'Subject_or_Unit_11': '', 'Subject_Objective_11': '', 'Subject_Description_11': '',
+               'Subject_or_Unit_12': '', 'Subject_Objective_12': '', 'Subject_Description_12': '',
+               'Subject_or_Unit_13': '', 'Subject_Objective_13': '', 'Subject_Description_13': '',
+               'Subject_or_Unit_14': '', 'Subject_Objective_14': '', 'Subject_Description_14': '',
+               'Subject_or_Unit_15': '', 'Subject_Objective_15': '', 'Subject_Description_15': '',
+               'Subject_or_Unit_16': '', 'Subject_Objective_16': '', 'Subject_Description_16': '',
+               'Subject_or_Unit_17': '', 'Subject_Objective_17': '', 'Subject_Description_17': '',
+               'Subject_or_Unit_18': '', 'Subject_Objective_18': '', 'Subject_Description_18': '',
+               'Subject_or_Unit_19': '', 'Subject_Objective_19': '', 'Subject_Description_19': '',
+               'Subject_or_Unit_20': '', 'Subject_Objective_20': '', 'Subject_Description_20': '',
+               'Subject_or_Unit_21': '', 'Subject_Objective_21': '', 'Subject_Description_21': '',
+               'Subject_or_Unit_22': '', 'Subject_Objective_22': '', 'Subject_Description_22': '',
+               'Subject_or_Unit_23': '', 'Subject_Objective_23': '', 'Subject_Description_23': '',
+               'Subject_or_Unit_24': '', 'Subject_Objective_24': '', 'Subject_Description_24': '',
+               'Subject_or_Unit_25': '', 'Subject_Objective_25': '', 'Subject_Description_25': '',
+               'Subject_or_Unit_26': '', 'Subject_Objective_26': '', 'Subject_Description_26': '',
+               'Subject_or_Unit_27': '', 'Subject_Objective_27': '', 'Subject_Description_27': '',
+               'Subject_or_Unit_28': '', 'Subject_Objective_28': '', 'Subject_Description_28': '',
+               'Subject_or_Unit_29': '', 'Subject_Objective_29': '', 'Subject_Description_29': '',
+               'Subject_or_Unit_30': '', 'Subject_Objective_30': '', 'Subject_Description_30': '',
+               'Subject_or_Unit_31': '', 'Subject_Objective_31': '', 'Subject_Description_31': '',
+               'Subject_or_Unit_32': '', 'Subject_Objective_32': '', 'Subject_Description_32': '',
+               'Subject_or_Unit_33': '', 'Subject_Objective_33': '', 'Subject_Description_33': '',
+               'Subject_or_Unit_34': '', 'Subject_Objective_34': '', 'Subject_Description_34': '',
+               'Subject_or_Unit_35': '', 'Subject_Objective_35': '', 'Subject_Description_35': '',
+               'Subject_or_Unit_36': '', 'Subject_Objective_36': '', 'Subject_Description_36': '',
+               'Subject_or_Unit_37': '', 'Subject_Objective_37': '', 'Subject_Description_37': '',
+               'Subject_or_Unit_38': '', 'Subject_Objective_38': '', 'Subject_Description_38': '',
+               'Subject_or_Unit_39': '', 'Subject_Objective_39': '', 'Subject_Description_39': '',
+               'Subject_or_Unit_40': '', 'Subject_Objective_40': '', 'Subject_Description_40': ''
+               }
+
 possible_cities = {'docklands': 'Melbourne',
                    'melbourne': 'Melbourne',
                    'clayton': 'Melbourne',
@@ -68,19 +119,19 @@ def career(career_data):
 def durationo(p_word):
     if p_word:
         amount = p_word.split(" ")
-        if 'months' in p_word.__str__().lower():
+        if 'month' in p_word.__str__().lower():
             value_conv = DurationConverter.convert_duration(p_word)
             if len(amount) > 2:
                 duration = float(amount[0]) + float(amount[2])
             else:
                 duration = float(''.join(filter(str.isdigit, str(value_conv[0]))))
             duration_time = value_conv[1]
-            course_data['Duration'] = duration
-            course_data['Duration_Time'] = duration_time
-
-        else:
-            course_data['Duration'] = ""
-            course_data['Duration_Time'] = ''
+            if duration==12:
+                course_data['Duration'] = 1
+                course_data['Duration_Time'] = "Year"
+            else:
+                course_data['Duration'] = duration
+                course_data['Duration_Time'] = duration_time
     else:
         course_data['Duration'] = 'NA'
         course_data['Duration_Time'] = ''
@@ -91,7 +142,7 @@ def durationo(p_word):
 for each_url in course_links_file:
     course_data = {'Level_Code': '', 'University': 'Monash College',
                    'City': '', 'Course': '', 'Faculty': '',
-                   'Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
+                   'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
                    'Duration': '', 'Duration_Time': '', 'Full_Time': 'Yes', 'Part_Time': 'No',
                    'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': 'Equivalent AQF Degree Level',
                    'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
@@ -191,7 +242,8 @@ for each_url in course_links_file:
     # Duration
     course_dura = soup.select("tr:contains('Duration') td")
     for re in course_dura:
-        p_word = re.text.__str__().strip().replace("Part 1:", "").replace("Part 2:", "").replace("depending on stream", "").strip()
+        p_word = re.text.__str__().strip().replace("Part 1:", "").replace("Part 2:", "").replace("depending on stream",
+                                                                                                 "").strip()
         durationo(p_word)
 
     # English
@@ -209,12 +261,11 @@ for each_url in course_links_file:
     city = soup.select("tr:contains('Campus') td")
     for each_city in city:
         tempLine = each_city.text.lower()
-        # LOCATION/CITY
         for i in possible_cities:
             if i in tempLine:
                 actual_cities.append(possible_cities[i])
 
-    #Career
+    # Career
     career_data = soup.select("#table89236 tr")
     career_data2 = soup.select("#table06540 tr")
     career_data3 = soup.select("#table96826 tr")
@@ -238,7 +289,6 @@ for each_url in course_links_file:
         career(career_data7)
     else:
         course_data['Career_Outcomes/path'] = "?"
-    print(actual_cities,course_data['Website'])
 
     # duplicating entries with multiple cities for each city
     for i in actual_cities:
@@ -246,10 +296,10 @@ for each_url in course_links_file:
         course_data_all.append(copy.deepcopy(course_data))
     del actual_cities
 
-
 print(*course_data_all, sep='\n')
 desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
-                      'Fees', 'Currency', 'Currency_Time','Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
+                      'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
+                      'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
                       'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
                       'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
