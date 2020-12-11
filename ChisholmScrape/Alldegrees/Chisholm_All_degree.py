@@ -78,7 +78,8 @@ def local_money_r(loc_money):
         loc_fee = re.search(currency_pattern, local_fee_raw)
         if loc_fee:
             local_fee = loc_fee.group()
-            course_data['Local_Fees'] = local_fee.replace("$", "").strip()
+            money = local_fee.replace("$", "").replace(",","").strip()
+            course_data['Local_Fees'] = float(money)
         else:
             course_data['Local_Fees'] = "N/A"
 
@@ -89,7 +90,8 @@ def int_money_r(int_money):
         Int_fee = re.search(currency_pattern, int_fee_raw)
         if Int_fee:
             int_fee = Int_fee.group()
-            course_data['Int_Fees'] = int_fee.replace("$", "").strip()
+            money = int_fee.replace("$", "").replace(",","").strip()
+            course_data['Int_Fees'] = float(money)
         else:
             course_data['Int_Fees'] = "N/A"
 
@@ -118,7 +120,6 @@ def durationo(p_word):
                 elif 'month' in duration_time.__str__().lower():
                     course_data['Duration'] = duration
                     course_data['Duration_Time'] = 'Months'
-
                 else:
                     course_data['Duration'] = duration
                     course_data['Duration_Time'] = duration_time
@@ -150,7 +151,6 @@ def durationo(p_word):
         else:
             course_data['Duration'] = ''
             course_data['Duration_Time'] = ''
-
     except Exception:
         course_data['Duration'] = ''
         course_data['Duration_Time'] = ''
@@ -175,8 +175,8 @@ for each_url in course_links_file:
     course_data = {'Level_Code': '', 'University': 'Chisholm Institute', 'City': '', 'Course': '', 'Faculty': '',
                    'Int_Fees': '', 'Local_Fees': '', 'Currency': 'AUD', 'Currency_Time': 'Years',
                    'Duration': '', 'Duration_Time': '', 'Full_Time': '', 'Part_Time': '',
-                   'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS',
-                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '',
+                   'Prerequisite_1': 'ATAR', 'Prerequisite_2': 'IELTS', 'Prerequisite_3': '',
+                   'Prerequisite_1_grade_1': '', 'Prerequisite_2_grade_2': '', 'Prerequisite_3_grade_3': '',
                    'Website': '', 'Course_Lang': 'English',
                    'Availability': '', 'Description': '', 'Career_Outcomes/path': '', 'Country': 'Australia',
                    'Online': '', 'Offline': '', 'Distance': '', 'Face_to_Face': '', 'Blended': '', 'Remarks': '',
@@ -428,7 +428,6 @@ for each_url in course_links_file:
             course_data[f'Subject_Objective_{t}'] = to.text.strip()
             t = t + 1
 
-
     if actual_cities is not None:
         course_data['Offline'] = "Yes"
     else:
@@ -449,7 +448,6 @@ for each_url in course_links_file:
     else:
         course_data['Blended'] = "No"
 
-    print(course_data['Website'])
     for i in actual_cities:
         course_data['City'] = possible_cities[i.lower()]
         course_data_all.append(copy.deepcopy(course_data))
@@ -460,7 +458,8 @@ print(*course_data_all, sep='\n')
 desired_order_list = ['Level_Code', 'University', 'City', 'Course', 'Faculty',
                       'Int_Fees', 'Local_Fees', 'Currency', 'Currency_Time',
                       'Duration', 'Duration_Time', 'Full_Time', 'Part_Time',
-                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2',
+                      'Prerequisite_1', 'Prerequisite_2', 'Prerequisite_3',
+                      'Prerequisite_1_grade_1', 'Prerequisite_2_grade_2', 'Prerequisite_3_grade_3',
                       'Website', 'Course_Lang', 'Availability', 'Description', 'Career_Outcomes/path', 'Country',
                       'Online', 'Offline', 'Distance', 'Face_to_Face', 'Blended', 'Remarks',
                       'Course Delivery Mode', 'FREE TAFE',

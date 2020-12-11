@@ -39,8 +39,10 @@ def convert_duration(duration):
                     if re.findall(r'(?:\d+\.)\d+', duration)[0] < 7:
                         return convert_duration(str(int(float(number) * 4)) + 'week')
                 elif int(number) % 12 == 0:  # if the number is a sharp factor of 12
-
-                    return int(int(number) / 12), 'Years'
+                    if int(int(number) / 12) == 1:
+                        return int(int(number) / 12), 'Year'
+                    else:
+                        return int(int(number) / 12), 'Years'
                 else:
                     return int(round(float(number))), 'Months'  # if not, just round it up and return months
 

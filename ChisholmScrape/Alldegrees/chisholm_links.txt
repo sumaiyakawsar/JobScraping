@@ -46,6 +46,7 @@ https://www.chisholm.edu.au/courses/certificate-iv/accounting-and-bookkeeping
 https://www.chisholm.edu.au/courses/diploma/accounting
 https://www.chisholm.edu.au/courses/advanced-diploma/accounting
 https://www.chisholm.edu.au/courses/certificate-iii/business-traineeship
+https://www.chisholm.edu.au/courses/certificate-iv/certificate-iv-business-traineeship
 https://www.chisholm.edu.au/courses/certificate-iv/business-traineeship-medical
 https://www.chisholm.edu.au/courses/certificate-iv/business
 https://www.chisholm.edu.au/courses/diploma/diplomabusiness-administration-online
@@ -68,7 +69,6 @@ https://www.chisholm.edu.au/courses/diploma/diplomaalcohol-and-other-drugs-onlin
 https://www.chisholm.edu.au/courses/diploma/counselling
 https://www.chisholm.edu.au/courses/diploma/mental-health
 https://www.chisholm.edu.au/courses/diploma/diplomamental-health--diplomaalcohol-and-other-drugs-online
-https://www.chisholm.edu.au/courses/diploma/mental-health-international
 https://www.chisholm.edu.au/courses/bachelor-degree/bachelor-of-community-mental-health-alcohol-and-other-drugs
 https://www.chisholm.edu.au/courses/certificate-iii/community-services
 https://www.chisholm.edu.au/courses/certificate-iv/ageing-support
@@ -190,8 +190,8 @@ https://www.chisholm.edu.au/courses/vet-in-schools/certificate-ii/sport-and-recr
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/beauty-services--vetis
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/business-vet-in-schools
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/business-administration-legal-vet-in-schools
-https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/design-fundamentals--photography-vet-in-schools
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/design-fundamentals--vetis
+https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/design-fundamentals--photography-vet-in-schools
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/early-childhood-education-and-care--vetis
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/health-services-assistance--vetis
 https://www.chisholm.edu.au/courses/vet-in-schools/certificate-iii/information-digital-media-and--technology--cyber-security-vet-delivered-to-secondary-students
