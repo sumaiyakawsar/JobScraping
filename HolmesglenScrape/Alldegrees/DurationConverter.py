@@ -37,18 +37,21 @@ def convert_duration(duration):
             elif 'month' in dur:
                 if '.' in number:
                     if re.findall(r'(?:\d+\.)\d+', duration)[0] < 7:
-                        return convert_duration(str(int(float(number) * 4)) + 'week')
+                        return convert_duration(str(round(float(number) * 4)) + 'week')
+                    return int(re.findall(r'(?:\d+\.)\d+', duration)[0]), 'Month'
                 elif int(number) % 12 == 0:  # if the number is a sharp factor of 12
-
-                    return int(int(number) / 12), 'Years'
+                    if int(int(number) / 12) == 1:
+                        return int(int(number) / 12), 'Year'
+                    else:
+                        return int(int(number) / 12), 'Years'
                 else:
                     return int(round(float(number))), 'Months'  # if not, just round it up and return months
 
             elif 'week' in dur:
                 return round(int(number)), 'Weeks'
-            elif 'hour' in dur:  # for real bruh??
+            elif 'hour' in dur:
                 return int(number), 'Hours'
-            elif 'semester' in dur:  # one semester being rounded to 6 months... sure.
+            elif 'semester' in dur:
                 return convert_duration(str(int(number) * 6) + 'month')
             elif 'trimester' in dur:
                 return convert_duration(str(int(number) * 3) + 'month')
