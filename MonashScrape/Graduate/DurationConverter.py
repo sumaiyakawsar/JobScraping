@@ -23,23 +23,22 @@ def convert_duration(duration):
         if number != '':
             nums.append(number)
 
-
     for number in nums:
         for dur in dur_type_list:
 
             # CHECK FOR "YEAR" (But note that Year could also carry a month field in decimals!)
             if 'year' in dur:
                 if '.' in number:
-                    if re.findall(r'\d+', duration)[1] != 0:
-                        return convert_duration(str(round(float(number) * 12)) + ' month')
-                    return int(re.findall(r'\d+', duration)[0]), 'Years'
+                    if re.findall(r'(?:\d+\.)?\d+', duration)[0] != 0:
+                        return convert_duration(str(round(float(number) * 12)) + ' months')
+                    return int(re.findall(r'(?:\d+\.)?\d+', duration)[0]), 'Year'
                 else:
                     return int(number), 'Years'
 
             # CHECK FOR "MONTH"
             elif 'month' in dur:
                 if '.' in number:
-                    if re.findall(r'\d+', duration)[0] < 7:
+                    if re.findall(r'(?:\d+\.)?\d+', duration)[0] < 7:
                         return convert_duration(str(int(float(number) * 4)) + ' week')
                 elif int(number) % 12 == 0:  # if the number is a sharp factor of 12
                     return int(int(number) / 12), 'Years'
