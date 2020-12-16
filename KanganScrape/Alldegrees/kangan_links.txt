@@ -56,8 +56,9 @@ https://www.kangan.edu.au/tafe-courses/certificate-iii-in-electrotechnology-elec
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-elevating-work-platform-technology-3214
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-engineering-fabrication-trade-1566
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-engineering-mechanical-trade-1565
+https://www.kangan.edu.au/tafe-courses/certificate-iii-in-food-processing-3940
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-forklift-technology-3164
-https://www.kangan.edu.au/tafe-courses/certificate-iii-in-formwork-falsework-3008
+https://www.kangan.edu.au/tafe-courses/certificate-iii-in-formworkfalsework-3008
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-hairdressing-3182
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-health-services-assistance-3085
 https://www.kangan.edu.au/tafe-courses/certificate-iii-in-heavy-commercial-trailer-technology-3241
@@ -121,7 +122,6 @@ https://www.kangan.edu.au/tafe-courses/course-in-preliminary-spoken-and-written-
 https://www.kangan.edu.au/tafe-courses/course-in-working-safely-in-the-solar-industry-3368
 https://www.kangan.edu.au/tafe-courses/crosssector-infection-control-skill-set-3375
 https://www.kangan.edu.au/tafe-courses/diploma-of-accounting-3334
-https://www.kangan.edu.au/tafe-courses/diploma-of-agriculture-3173
 https://www.kangan.edu.au/tafe-courses/diploma-of-applied-fashion-design-and-merchandising-3361
 https://www.kangan.edu.au/tafe-courses/diploma-of-beauty-therapy-3104
 https://www.kangan.edu.au/tafe-courses/diploma-of-building-and-construction-building-1954
