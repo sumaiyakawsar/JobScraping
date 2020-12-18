@@ -68,17 +68,14 @@ https://www.qut.edu.au/courses/bachelor-of-business-honours-accountancy?internat
 https://www.qut.edu.au/courses/bachelor-of-business-honours-economics?international
 https://www.qut.edu.au/courses/bachelor-of-business-honours-finance?international
 https://www.qut.edu.au/courses/bachelor-of-business-honours-financial-planning?international
-https://www.qut.edu.au/courses/graduate-certificate-in-business-accounting?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-applied-finance?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-behavioural-economics?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-financial-planning?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-forensic-accounting?international
-https://www.qut.edu.au/courses/graduate-certificate-in-business-interdisciplinary?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-professional-accounting?international
 https://www.qut.edu.au/courses/graduate-diploma-in-business-financial-planning?international
 https://www.qut.edu.au/courses/graduate-diploma-in-business-research-accountancy?international
 https://www.qut.edu.au/courses/executive-master-of-business-administration?international
-https://www.qut.edu.au/courses/master-of-business-accounting?international
 https://www.qut.edu.au/courses/master-of-business-applied-finance?international
 https://www.qut.edu.au/courses/master-of-business-professional-accounting?international
 https://www.qut.edu.au/courses/master-of-business-administration-digital?international
@@ -110,7 +107,6 @@ https://www.qut.edu.au/courses/master-of-business-integrated-marketing-communica
 https://www.qut.edu.au/courses/master-of-business-marketing?international
 https://www.qut.edu.au/courses/master-of-business-public-relations?international
 https://www.qut.edu.au/courses/master-of-business-strategic-advertising?international
-https://www.qut.edu.au/courses/master-of-business-master-of-business?international
 https://www.qut.edu.au/courses/master-of-digital-communication?international
 https://www.qut.edu.au/courses/bachelor-of-communication-digital-media?international
 https://www.qut.edu.au/courses/bachelor-of-communication-entertainment-industries?international
@@ -131,10 +127,11 @@ https://www.qut.edu.au/courses/bachelor-of-business-honours-international-busine
 https://www.qut.edu.au/courses/executive-graduate-certificate-in-business-administration?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-international-business?international
 https://www.qut.edu.au/courses/master-of-business-international-business?international
-https://www.qut.edu.au/courses/executive-graduate-certificate-in-business-leadership-through-coaching-and-mentoring?international
+https://www.qut.edu.au/courses/executive-graduate-certificate-in-business-leadership-coaching?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-enterprise-leadership?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-public-sector-management?international
 https://www.qut.edu.au/courses/graduate-certificate-in-business-administration-digital?international
+https://www.qut.edu.au/courses/graduate-diploma-in-business-enterprise-leadership?international
 https://www.qut.edu.au/courses/bachelor-of-business-human-resource-management?international
 https://www.qut.edu.au/courses/bachelor-of-business-management?international
 https://www.qut.edu.au/courses/bachelor-of-business-honours-human-resource-management?international
@@ -161,6 +158,7 @@ https://www.qut.edu.au/courses/bachelor-of-fine-arts-film-screen-and-new-media?i
 https://www.qut.edu.au/courses/bachelor-of-fine-arts-music?international
 https://www.qut.edu.au/courses/bachelor-of-fine-arts-technical-production?international
 https://www.qut.edu.au/courses/bachelor-of-fine-arts-visual-arts?international
+https://www.qut.edu.au/courses/bachelor-of-creative-industries-bachelor-of-data-science?international
 https://www.qut.edu.au/courses/bachelor-of-creative-industries-bachelor-of-human-services?international
 https://www.qut.edu.au/courses/bachelor-of-creative-industries-bachelor-of-information-technology?international
 https://www.qut.edu.au/courses/bachelor-of-creative-industries-bachelor-of-laws-honours?international
@@ -174,6 +172,7 @@ https://www.qut.edu.au/courses/bachelor-of-fine-arts-creative-writing-bachelor-o
 https://www.qut.edu.au/courses/bachelor-of-fine-arts-film-screen-and-new-media-bachelor-of-laws-honours?international
 https://www.qut.edu.au/courses/doctor-of-creative-industries?international
 https://www.qut.edu.au/courses/doctor-of-philosophy-creative-industries?international
+https://www.qut.edu.au/courses/bachelor-of-communication-bachelor-of-data-science?international
 https://www.qut.edu.au/courses/bachelor-of-design-fashion?international
 https://www.qut.edu.au/courses/bachelor-of-design-industrial-design?international
 https://www.qut.edu.au/courses/bachelor-of-design-interaction-design?international
@@ -265,6 +264,7 @@ https://www.qut.edu.au/courses/bachelor-of-human-services?international
 https://www.qut.edu.au/courses/bachelor-of-public-health?international
 https://www.qut.edu.au/courses/bachelor-of-human-services-bachelor-of-justice?international
 https://www.qut.edu.au/courses/bachelor-of-human-services-bachelor-of-public-health?international
+https://www.qut.edu.au/courses/graduate-certificate-in-digital-health-leadership-and-management?international
 https://www.qut.edu.au/courses/graduate-certificate-in-health-science?international
 https://www.qut.edu.au/courses/graduate-diploma-in-environmental-health?international
 https://www.qut.edu.au/courses/graduate-diploma-in-health-management?international
@@ -285,6 +285,7 @@ https://www.qut.edu.au/courses/graduate-diploma-in-diagnostic-genomics?internati
 https://www.qut.edu.au/courses/master-of-diagnostic-genomics?international
 https://www.qut.edu.au/courses/bachelor-of-laws-honours?international
 https://www.qut.edu.au/courses/bachelor-of-laws-honours-graduate-entry?international
+https://www.qut.edu.au/courses/bachelor-of-data-science-bachelor-of-laws-honours?international
 https://www.qut.edu.au/courses/bachelor-of-information-technology-bachelor-of-laws-honours?international
 https://www.qut.edu.au/courses/bachelor-of-justice-bachelor-of-laws-honours?international
 https://www.qut.edu.au/courses/bachelor-of-science-bachelor-of-laws-honours?international
@@ -301,6 +302,8 @@ https://www.qut.edu.au/courses/bachelor-of-engineering-honours-computer-and-soft
 https://www.qut.edu.au/courses/bachelor-of-games-and-interactive-environments-software-technologies?international
 https://www.qut.edu.au/courses/bachelor-of-information-technology-computer-science?international
 https://www.qut.edu.au/courses/bachelor-of-information-technology-information-systems?international
+https://www.qut.edu.au/courses/bachelor-of-business-bachelor-of-data-science?international
+https://www.qut.edu.au/courses/bachelor-of-data-science-bachelor-of-property-economics?international
 https://www.qut.edu.au/courses/bachelor-of-engineering-honours-bachelor-of-information-technology?international
 https://www.qut.edu.au/courses/bachelor-of-games-and-interactive-environments-bachelor-of-mathematics?international
 https://www.qut.edu.au/courses/bachelor-of-information-technology-bachelor-of-mathematics?international
