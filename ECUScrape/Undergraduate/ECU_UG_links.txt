@@ -81,7 +81,6 @@ https://www.ecu.edu.au/degrees/courses/bachelor-of-science-occupational-therapy
 https://www.ecu.edu.au/degrees/courses/bachelor-of-science-occupational-therapy-honours
 https://www.ecu.edu.au/degrees/courses/bachelor-of-science-paramedical-science
 https://www.ecu.edu.au/degrees/courses/bachelor-of-science-psychology-honours
-https://www.ecu.edu.au/degrees/courses/bachelor-of-science-security
 https://www.ecu.edu.au/degrees/courses/bachelor-of-science-honours
 https://www.ecu.edu.au/degrees/courses/bachelor-of-science-bachelor-of-commerce
 https://www.ecu.edu.au/degrees/courses/bachelor-of-social-science
@@ -90,7 +89,6 @@ https://www.ecu.edu.au/degrees/courses/bachelor-of-social-work-honours
 https://www.ecu.edu.au/degrees/courses/bachelor-of-speech-pathology
 https://www.ecu.edu.au/degrees/courses/bachelor-of-speech-pathology-honours
 https://www.ecu.edu.au/degrees/courses/bachelor-of-sport-recreation-and-event-management
-https://www.ecu.edu.au/degrees/courses/bachelor-of-sustainability
 https://www.ecu.edu.au/degrees/courses/bachelor-of-technology-aeronautical
 https://www.ecu.edu.au/degrees/courses/bachelor-of-technology-electronic-and-computer-systems
 https://www.ecu.edu.au/degrees/courses/bachelor-of-technology-engineering
@@ -105,8 +103,6 @@ https://www.ecu.edu.au/degrees/courses/diploma-of-music-industry
 https://www.ecu.edu.au/degrees/courses/diploma-of-musical-theatre
 https://www.ecu.edu.au/degrees/courses/diploma-of-screen-performance
 https://www.ecu.edu.au/degrees/courses/indigenous-university-orientation-course
-https://www.ecu.edu.au/degrees/courses/undergraduate-certificate-in-cyber-security
-https://www.ecu.edu.au/degrees/courses/undergraduate-certificate-in-engineering
 https://www.ecu.edu.au/degrees/courses/uniprep-accelerate
 https://www.ecu.edu.au/degrees/courses/university-preparation-course
 https://www.ecu.edu.au/degrees/courses/university-preparation-course-education

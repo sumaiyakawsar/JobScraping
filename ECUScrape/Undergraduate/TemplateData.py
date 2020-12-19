@@ -20,7 +20,7 @@ level_key = {'VOC': ['Vocational'],
                     'MPharm', 'MBiol', 'PCE', 'MBChB', 'DipHE', 'AS', 'BS', 'BSN', 'BSME', 'BSB', 'BSCH', 'BSA', 'BSEE',
                     'BLS', 'BSCE', 'BSCMPE', 'B.S.', 'B.A.', 'B.S.F.', 'B.M.', 'Major', 'Cognate', 'NSB', 'B.F.A.',
                     'First', '1st', 'Bachelor\'s', 'B.Sc.'],
-             'UG': ['Undergraduate'],
+
              'BAH': ['Bachelor honours'],
              'GDIP': ['Graduate Diploma'],
              'GCERT': ['Graduate Certificate', 'PGCE ', 'PgC'],
@@ -35,7 +35,12 @@ level_key = {'VOC': ['Vocational'],
              'PHD': ['PhD', 'Ph.D.'],
              'Minor': ['Minor'],
              'SHORT COURSES': ['Short', 'Course'], 'SEMINAR': ['Seminar'], 'PRODEV': ['Tailor'], 'CONF': ['Conference'],
-             'HONS': ['Honours', 'Hons']}
+             'HONS': ['Honours', 'Hons'],
+             'CERTIV':['Certificate IV']
+
+
+
+             }
 
 faculty_key = {
     'Academic Pathway Programs': ['accelerate', 'preparation'],

@@ -36,7 +36,8 @@ def course():
             .find_elements_by_tag_name('h3')
         for element in result_elements:
             link = element.find_element_by_tag_name('a').get_property('href')
-            list_of_links.append(link)
+            if link not in list_of_links:
+                list_of_links.append(link)
         try:
             browser.execute_script("arguments[0].click();", WebDriverWait(browser, delay_).until(
                 EC.element_to_be_clickable((By.LINK_TEXT, 'Next'))))
