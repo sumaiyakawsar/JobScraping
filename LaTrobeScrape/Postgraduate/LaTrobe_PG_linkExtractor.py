@@ -28,8 +28,6 @@ list_of_links = []
 browser.get(courses_page_url)
 the_url = browser.page_source
 
-delay_ = 5  # seconds
-
 
 def click_btn():
     browser.find_element_by_xpath("/html/body/div[1]/div/ul/li[2]/button").click()
