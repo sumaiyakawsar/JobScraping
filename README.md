@@ -11,7 +11,15 @@
     <a href="https://github.com/sumaiyakawsar/JobScraping/tree/main/AustraliaCollegeofNursingScrape">
       Australia College of Nursing
     </a>
-    
+       <a href="https://github.com/sumaiyakawsar/JobScraping/tree/main/Avondale%20College">
+       Avondale College
+    </a>
+      </a>
+       <a href=" https://github.com/sumaiyakawsar/JobScraping/tree/main/BillyBlueScrape">
+        Billy Blue College
+    </a>
+   
+  
     </h3>
 
 
