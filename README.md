@@ -7,7 +7,7 @@
 - **Date:** 22nd October 2020 - 31st December 2020
 
 
-# Built with (Courses_linkExtractor + Courses_data)
+# Technologies/Libraries Used
 - [Selenium](https://www.selenium.dev/documentation/en/getting_started/)
 - [beautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - [Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
