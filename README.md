@@ -10,10 +10,7 @@
 # Technologies/Libraries Used
 - [Selenium](https://www.selenium.dev/documentation/en/getting_started/)
 - [beautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- ![Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
-   <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">
-      <img src="https://github.com/pandas-dev/pandas/blob/master/web/pandas/static/img/pandas.svg"width="32px">
-    </a>
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
 
 # University Course Details Scraped
 1. [Australia College of Nursing](https://github.com/sumaiyakawsar/JobScraping/tree/main/AustraliaCollegeofNursingScrape)
@@ -42,21 +39,4 @@
 # Contact
 - GitHub [@sumaiyakawsar](https://github.com/sumaiyakawsar)
 
-<div style="display:inline">
-<div style="float:left">
-<a href="https://en.wikipedia.org/wiki/HTML">
-<img src="img/html_5_96px.png" width="32px">
-</a>
-<a href="https://sass-lang.com/">
-<img src="img/sass_96px.png" width="32px"></a>
-</div>
-<div style="float:right">
-    <a href="https://github.com/sumaiyakawsar/">
-      <img src="img/github_32px.png" width="32px">
-    </a>
-    <a href="https://twitter.com/_SumaiyaKawsar_">
-      <img src="img/twitter_48px.png"width="32px">
-    </a>
-</div>
-</div>
 
