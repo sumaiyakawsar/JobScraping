@@ -41,3 +41,22 @@
 
 # Contact
 - GitHub [@sumaiyakawsar](https://github.com/sumaiyakawsar)
+
+<div style="display:inline">
+<div style="float:left">
+<a href="https://en.wikipedia.org/wiki/HTML">
+<img src="img/html_5_96px.png" width="32px">
+</a>
+<a href="https://sass-lang.com/">
+<img src="img/sass_96px.png" width="32px"></a>
+</div>
+<div style="float:right">
+    <a href="https://github.com/sumaiyakawsar/">
+      <img src="img/github_32px.png" width="32px">
+    </a>
+    <a href="https://twitter.com/_SumaiyaKawsar_">
+      <img src="img/twitter_48px.png"width="32px">
+    </a>
+</div>
+</div>
+
