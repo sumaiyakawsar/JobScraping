@@ -7,12 +7,12 @@
 - **Date:** 22nd October 2020 - 31st December 2020
 
 
-# Technologies/Libraries Used
-- [Selenium](https://www.selenium.dev/documentation/en/getting_started/)
-- [beautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- [Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html)
+## Technologies/Libraries Used
+[![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&labelColor=black&logo=python&logoColor=3776AB)](https://docs.python.org/3/) [![Selenium Badge](https://img.shields.io/badge/-Selenium-43B02A?style=flat&labelColor=black&logo=selenium&logoColor=43B02A)](https://www.selenium.dev/documentation/en/getting_started/) [![pandas Badge](https://img.shields.io/badge/-Pandas-150458?style=flat&labelColor=black&logo=pandas&logoColor=150458)](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html) [![BS Badge](https://img.shields.io/badge/-Beautiful_Soup-11303d?style=flat&labelColor=black&logoColor=11303d)](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)![Excel Badge](https://img.shields.io/badge/-Microsoft_Excel-217346?style=flat&labelColor=black&logo=microsoftexcel&logoColor=217346)
 
-# University Course Details Scraped
+
+ 
+## University Course Details Scraped
 1. [Australia College of Nursing](https://github.com/sumaiyakawsar/JobScraping/tree/main/AustraliaCollegeofNursingScrape)
 2. [Avondale College](https://github.com/sumaiyakawsar/JobScraping/tree/main/Avondale%20College)
 3. [Billy Blue College](https://github.com/sumaiyakawsar/JobScraping/tree/main/BillyBlueScrape)
@@ -37,6 +37,6 @@
 22. [Victorian Institute of Technology](https://github.com/sumaiyakawsar/JobScraping/tree/main/VITScrape)
 
 # Contact
-- GitHub [@sumaiyakawsar](https://github.com/sumaiyakawsar)
+[![GitHub Badge](https://img.shields.io/badge/-@sumaiyakawsar-181717?style=plastic&labelColor=181717&logo=github&logoColor=white&link=https://github.com/sumaiyakawsar)](https://github.com/sumaiyakawsar) [![Gmail Badge](https://img.shields.io/badge/-sumaiya.kawsar693@gmail.com-c0392b?style=plastic&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:sumaiyakawsar693@gmail.com)
 
 
