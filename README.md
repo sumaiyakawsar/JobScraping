@@ -1,4 +1,8 @@
-<h1 align="center">JobScraping</h1>
+<h1 align="center">JobScraping
+
+ ![Created Badge](https://badges.pufler.dev/created/sumaiyakawsar/JobScraping?&style=plastic&color=black&labelColor=1AEE0B) ![Updated Badge](https://badges.pufler.dev/updated/sumaiyakawsar/JobScraping?&style=plastic&color=black&labelColor=0004FF) ![Visits Badge](https://badges.pufler.dev/visits/sumaiyakawsar/JobScraping?&style=plastic&color=black&labelColor=BF3F41)   ![Reason Badge](https://img.shields.io/badge/Internship_Project-10b981?style=plastic)
+
+</h1>
 
 # Built by
 - **Author:** Sumaiya Kawsar
